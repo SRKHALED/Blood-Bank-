@@ -1,0 +1,60 @@
+body{
+	background-image: url(blood.jpg);
+	background-size: cover;
+}
+header,footer,nav{
+	background-image: url(bc.jpg);
+	background-size: cover;
+}
+h1,h2{
+	color: white;
+	font-family:"Arial Black", Gadget, sans-serif;
+}
+button{
+	border: none;
+  	color: white;
+  	background-color: red;
+  	padding: 14px 35px;
+  	font-size: 16px;
+  	cursor: pointer;
+	box-shadow: 0 5px #999;
+	border: none;
+  	border-top-left-radius: 50px;
+  	border-top-right-radius: 50px;
+  	border-bottom-right-radius: 50px;
+	border-bottom-left-radius: 50px;
+}
+button:hover{
+	background-color: black;
+}
+article {
+    overflow: hidden;
+	color:white;
+	font-size:18px;
+	font-family: "Comic Sans MS", cursive, sans-serif;
+}
+.fild{
+	font-size: 16px;
+    border: 1px solid white;
+	background-image:url(p1.jpg);
+	background-size: cover;
+	border-top-left-radius: 5px;
+  	border-top-right-radius: 5px;
+  	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 5px;
+	font-family: "Comic Sans MS", cursive, sans-serif;
+	overflow: hidden;
+}
+
+input{
+	border-top-left-radius: 50px;
+  	border-top-right-radius: 50px;
+  	border-bottom-right-radius: 50px;
+	border-bottom-left-radius: 50px;
+}
+select{
+	border-top-left-radius: 50px;
+  	border-top-right-radius: 50px;
+  	border-bottom-right-radius: 50px;
+	border-bottom-left-radius: 50px;
+}

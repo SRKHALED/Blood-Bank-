@@ -1,0 +1,44 @@
+{% extends "base.html" %} 
+{% block content %}
+<br><br>
+<center>
+	<div class="row">
+		<div class="col-sm-3"></div>
+		<div class="col-sm-6">
+			<div class="fild">
+				<form  method="POST" class="form-inline" action="{% url 'update' donor.pk %}">
+					{% csrf_token %}
+					<div class="row">
+						<br /><strong style="font-size: 30px;"> Update Contact information </strong><br><br>
+						<div class="col-sm-6">
+							Mobile <br />
+							<input type="text" name="contact" value="{{donor.contact}}">
+							<br /><br />
+							E-mail <br />
+							<input type="email" name="email" value="{{donor.email}}">
+							<br /> <br/>
+							Division <br />
+							<input type="text" name="division" value="{{donor.division}}">
+							<br /> <br/>
+						</div>
+						<div class="col-sm-6">
+							City <br />
+							<input type="text" name="city" value="{{donor.city}}">
+							<br /> <br/>
+							Address<br />
+							<input type="text" name="address" value="{{donor.address}}">
+							<br /> <br/>
+							Password<br />
+							<input type="password" name="password" >
+							<br /> <br/>
+						</div>
+					</div>
+					<button type="submit" class="btn btn-primary">Update Now!</button>
+					<br />
+				</form>
+			</div>
+		</div>
+	</div>
+</center>
+<br><br><br><br>
+{%endblock%}

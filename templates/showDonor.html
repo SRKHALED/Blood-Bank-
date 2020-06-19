@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block content %}
+	<br><br>
+	<div class="row">
+		<div class="col-sm-1"></div>
+		<div class="col-sm-10">
+			<div class="fild" style="color:black; background-color: black;">
+				<center><strong style="font-size: 30px; color:; font-family: "Comic Sans MS", cursive, sans-serif;">Donor List</strong></center><br>
+				<div class="row">
+				{% for donor,age in donor_list %}
+					<div class="col-sm-5" style="margin-left: 2px;">
+						<br>
+						Name :  {{donor.name}}<br>
+						Email : {{donor.email}}<br>
+						Mobile : {{donor.contact}}<br>
+						Blood Group : {{donor.blood}}<br>
+						Address : {{donor.address}}, {{donor.city}} <br>
+						Age : {{age}} Years<br>
+						Gender : {{donor.gender}}<br>
+						<br>
+					</div>
+				{% endfor %}
+				</div>
+				<br>
+			</div>
+		</div>
+	</div>
+{%endblock%}

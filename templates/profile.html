@@ -1,0 +1,29 @@
+{% extends "base.html" %} 
+{% block content %}
+{%load static%}
+<center><b><h2>Donor Profile</h2></b></center>
+	<div class="row">
+		<div class="col-sm-2"></div>
+		<div class="col-sm-8">
+			<div class="fild">
+				<div class="row">
+					<div class="col-sm-6">
+						<img src="{% static 'p2.png' %}" height="432" width="95%">
+					</div>
+					<div class="col-sm-6">
+						<h3><b>{{donor.name}}</b></h3>
+						Mobile : {{donor.contact}}<br><br>
+						Email : {{donor.email}}<br><br>
+						Blood Group : {{donor.blood}}<br><br>
+						Gender : {{donor.gender}}<br><br>
+						Date Of Birth : {{donor.date_of_birth}}<br><br>
+						Height & Weight : {{donor.height}} Fit & {{donor.weight}} Kg<br><br>
+						Address : {{donor.address}} {{donor.city}}<br><br>
+						<a href="{% url 'edit' donor.pk %}"><button class="btn btn-primary">Update Contat Info</button></a>
+						<br><br>
+					</div>
+			</div>
+		</div>
+	</div>
+</div>
+{%endblock%}

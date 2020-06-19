@@ -1,0 +1,46 @@
+{% extends "base.html" %} 
+{% block content %}
+	<br><br>
+	<div class="row">
+		<div class="col-sm-4">
+			<div class="fild">
+				<center><form action= "{% url 'showDonor' %}"  method="POST" class="form-inline">
+					{% csrf_token %}
+					<div class="form-group">
+						<br /><strong style="font-size: 20px; color: white"> Search Donor </strong><br />
+							Division  <br />
+							{{form.division}}
+							<br />
+							Blood Group <br />
+							{{form.blood}}
+							<br>
+							City  <br />
+							{{form.city}}
+							<br />
+							Gender <br />
+							{{form.gender}}
+							<br><br>
+						<button type="submit" class="btn btn-primary">Search</button>
+						<br><br>
+					</div>
+				</form></center>
+			</div>
+		</div>
+		<div class="col-sm-1">
+		</div>
+		<div class="col-sm-7">
+			<article>
+				<h2>Welcome to Online Blood Bank</h2>
+				<p>
+					Everyday, hundreds of children and adults require blood to save their life.<br>
+					People like you donate blood to save these precious lives.<br><br>
+
+					If you want to become a donor, you have to become a member. When another member is in need
+					<br> of blood of your group, he/she will be able to search the database, find your name, 
+					<br>address, phone number and email address and will contact you and request you to donate blood.<br>
+				</p>
+			</article>
+		</div>
+	</div>
+	<br><br><br><br>
+{%endblock%}
